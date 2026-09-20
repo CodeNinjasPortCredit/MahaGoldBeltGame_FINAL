@@ -72,6 +72,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 9044228642648600064}
   oldBody: {fileID: 3469740395097982896}
   newBody: {fileID: 8993985734423643414}
+  NONtransformingPlayer: 0
   visionRange: 20
   visionAngle: 60
   visionLayerMask:
@@ -225,6 +226,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 77a32863e7db71143ace465657f12120, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6ae3eae5fb1679849ad188acafd35813, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

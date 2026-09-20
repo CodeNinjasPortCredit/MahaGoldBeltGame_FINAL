@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level 2.unity
     guid: a1528ea523061444198c94a62807fac4
+  - enabled: 1
+    path: Assets/Scenes/circus.unity
+    guid: b7bfba005ef5b394ea7ce23d44735bbf
   m_configObjects: {}

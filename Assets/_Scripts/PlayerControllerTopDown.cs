@@ -37,8 +37,13 @@ public class PlayerControllerTopDown : MonoBehaviour
     [SerializeField] private bool isInInteraction = false;
     private bool canMove = true;
 
+    private bool isInvincible = false; //start with ability to receieve damage
+    public float invincibilityDuration = 2.0f;
+
     private void Start()
     {
+        isInvincible = false;
+
         // Initialize Rigidbody if not assigned
         if (rb == null)
             rb = GetComponent<Rigidbody>();
@@ -208,6 +213,22 @@ public class PlayerControllerTopDown : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && !isInvincible) {  //when is not invincible
+            TakeDamage(); 
+        }
+    }
+
+    IEnumerator InvincibilityTimer()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(invincibilityDuration); //the amount of time he is invincible for
+        isInvincible = false;
+
+
+    }
+
     /// <summary>
     /// Reduces health by 1 and updates UI. Call when player takes damage.
     /// </summary>
@@ -223,6 +244,8 @@ public class PlayerControllerTopDown : MonoBehaviour
                 OnPlayerDeath();
             }
         }
+
+        StartCoroutine(InvincibilityTimer()); //start invincibility
     }
 
     /// <summary>

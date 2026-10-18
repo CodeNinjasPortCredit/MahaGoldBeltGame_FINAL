@@ -40,6 +40,9 @@ public class PlayerControllerTopDown : MonoBehaviour
     private bool isInvincible = false; //start with ability to receieve damage
     public float invincibilityDuration = 2.0f;
 
+    [Header("Game Over Canvas")]
+    public GameObject gameOverCanvas;
+
     private void Start()
     {
         isInvincible = false;
@@ -274,6 +277,8 @@ public class PlayerControllerTopDown : MonoBehaviour
     private void OnPlayerDeath()
     {
         Debug.Log("Player has died!");
+        gameOverCanvas.SetActive(true);
+        
         // TODO: Implement death logic (respawn, game over screen, etc.)
     }
 

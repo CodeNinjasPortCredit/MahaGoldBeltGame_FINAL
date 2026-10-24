@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MahaInterior.unity
+    path: Assets/LoafbrrAssets/LittleFriends-CartoonAnimals-Lite/MahaInterior.unity
     guid: a83d34c1e6ffffa4d91dcaf54ba7005d
   - enabled: 1
     path: Assets/Scenes/level 2.unity
@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/circus.unity
     guid: b7bfba005ef5b394ea7ce23d44735bbf
+  - enabled: 1
+    path: Assets/Scenes/ChiikawaLAND.unity
+    guid: 7f4a6bacbe131154bb186f6626107265
   m_configObjects: {}

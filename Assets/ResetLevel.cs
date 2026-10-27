@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ResetLevel : MonoBehaviour
 {
-   public void restart()
+    public GameObject gameOverUI;
+
+    void Update()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (gameOverUI.activeSelf && Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

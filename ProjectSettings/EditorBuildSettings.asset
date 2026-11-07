@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: ae1e8ff3343184e40b8392e0944f3ee4
+  - enabled: 1
     path: Assets/LoafbrrAssets/LittleFriends-CartoonAnimals-Lite/MahaInterior.unity
     guid: a83d34c1e6ffffa4d91dcaf54ba7005d
   - enabled: 1

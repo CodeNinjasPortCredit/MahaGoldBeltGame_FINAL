@@ -140,8 +140,6 @@ public class PlayerControllerTopDown : MonoBehaviour
         {
             isRunning = false;
         }
-
-        Debug.Log($"WantToRun: {wantToRun}, CanSprintAgain: {canSprintAgain}, Stamina: {currentStamina:F1}, Moving: {currentMovementDirection.magnitude > 0.1f}, IsRunning: {isRunning}");
     }
 
     private void UpdateStamina()
@@ -156,8 +154,6 @@ public class PlayerControllerTopDown : MonoBehaviour
             // Lock out sprinting if stamina completely depleted
             if (currentStamina <= 0)
                 canSprintAgain = false;
-
-            Debug.Log($"Draining Stamina: {currentStamina:F1} / {maxStamina}");
         }
         else
         {
@@ -189,7 +185,6 @@ public class PlayerControllerTopDown : MonoBehaviour
                 Vector2 sizeDelta = rectTransform.sizeDelta;
                 sizeDelta.x = newWidth;
                 rectTransform.sizeDelta = sizeDelta;
-                Debug.Log($"Stamina Display - Current: {currentStamina:F1}, Max: {maxStamina}, Width: {newWidth:F1} / {staminaBarMaxWidth}");
             }
         }
         else

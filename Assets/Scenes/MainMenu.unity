@@ -628,7 +628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Senseis at Code Ninjas, especially to Magdalena, Scott, and Jacky!
+  m_text: Made by Maha Bashir
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
   m_sharedMaterial: {fileID: 21148088844906328, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
@@ -658,9 +658,9 @@ MonoBehaviour:
   m_fontSize: 600
   m_fontSizeBase: 600
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 300
+  m_fontSizeMax: 600
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 4096
@@ -888,8 +888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -44, y: -157.475}
-  m_SizeDelta: {x: 392.2, y: -300.25}
+  m_AnchoredPosition: {x: -44, y: -232.475}
+  m_SizeDelta: {x: 392.2, y: -150.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770989544
 MonoBehaviour:
@@ -911,11 +911,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Assets: SlimUI, N91 Music, Southport Studio, Andrew Sitkov Music, Sound
-    Bits
+  m_text: 'Senseis: Magdalena, Scott, Jacky
 
+    Assets: SlimUI, N91 Music, Southport Studio,
 
-    NO AI USED!'
+    Andrew Sitkov Music, Sound Bits
+
+    Chiikawa by its creators
+
+    AI assistant: bug fixes'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
   m_sharedMaterial: {fileID: 21148088844906328, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
@@ -945,9 +949,9 @@ MonoBehaviour:
   m_fontSize: 600
   m_fontSizeBase: 600
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 250
+  m_fontSizeMax: 600
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 4096

@@ -14,6 +14,17 @@
 *.meta merge=unityyamlmerge eol=lf
 *.controller merge=unityyamlmerge eol=lf
 
+# Unity keeps terrain, navmesh and lightmap data as BINARY .asset files even
+# when Asset Serialization is set to Force Text. The eol=lf rule above treats
+# every .asset as text and rewrites line endings inside them, which destroys
+# binary data (any 0D 0A byte pair is collapsed to 0A). These rules mark the
+# binary ones as non-text so git copies them through untouched.
+*Terrain*.asset -text
+*NavMesh*.asset -text
+*LightingData*.asset -text
+*ReflectionProbe*.asset -text
+*.terrainlayer -text
+
 
 ## git-lfs ##
 

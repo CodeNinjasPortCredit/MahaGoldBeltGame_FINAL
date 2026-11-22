@@ -9,9 +9,16 @@ public class ResetLevel : MonoBehaviour
 
     void Update()
     {
-        if (gameOverUI.activeSelf && Input.GetKeyDown(KeyCode.Space))
+        if (gameOverUI != null && gameOverUI.activeSelf && Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            restart();
         }
+    }
+
+    // The "restart?" buttons on the game over screen call this by name.
+    // Reloading the active scene puts the player back at the start of the level.
+    public void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerControllerTopDown : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PlayerControllerTopDown : MonoBehaviour
 
     [Header("Camera")]
     [SerializeField] private Transform cameraTransform;
+
+    [Header("Restart")]
+    [SerializeField] private KeyCode resetKey = KeyCode.R;
 
     [Header("Animation")]
     [SerializeField] private Animator animatorController;
@@ -70,6 +74,15 @@ public class PlayerControllerTopDown : MonoBehaviour
 
     private void Update()
     {
+        // Press R to start the level over. Checked before the canMove guard so
+        // it still works while you are frozen or already dead - the same scene
+        // reload the game over screen's restart button does.
+        if (Input.GetKeyDown(resetKey))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            return;
+        }
+
         if (!canMove)
             return;
 
@@ -140,8 +153,6 @@ public class PlayerControllerTopDown : MonoBehaviour
         {
             isRunning = false;
         }
-
-        Debug.Log($"WantToRun: {wantToRun}, CanSprintAgain: {canSprintAgain}, Stamina: {currentStamina:F1}, Moving: {currentMovementDirection.magnitude > 0.1f}, IsRunning: {isRunning}");
     }
 
     private void UpdateStamina()
@@ -156,8 +167,6 @@ public class PlayerControllerTopDown : MonoBehaviour
             // Lock out sprinting if stamina completely depleted
             if (currentStamina <= 0)
                 canSprintAgain = false;
-
-            Debug.Log($"Draining Stamina: {currentStamina:F1} / {maxStamina}");
         }
         else
         {
@@ -189,7 +198,6 @@ public class PlayerControllerTopDown : MonoBehaviour
                 Vector2 sizeDelta = rectTransform.sizeDelta;
                 sizeDelta.x = newWidth;
                 rectTransform.sizeDelta = sizeDelta;
-                Debug.Log($"Stamina Display - Current: {currentStamina:F1}, Max: {maxStamina}, Width: {newWidth:F1} / {staminaBarMaxWidth}");
             }
         }
         else

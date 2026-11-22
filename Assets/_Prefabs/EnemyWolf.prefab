@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1342282704305819532}
   - component: {fileID: 390526081036227250}
   - component: {fileID: 6376952938592053381}
+  - component: {fileID: 4804000794455772315}
   m_Layer: 0
   m_Name: EnemyWolf
   m_TagString: Enemy
@@ -87,6 +88,27 @@ MonoBehaviour:
   roamRadius: 15
   roamWaitTime: 3
   bodySwapDistance: 5
+--- !u!65 &4804000794455772315
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4465119886873544199}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1659546, y: 3.3140278, z: 2.562388}
+  m_Center: {x: 0.06999397, y: 1.1570139, z: 0.065666914}
 --- !u!1001 &6388738777476596430
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class MainMenu1 : MonoBehaviour
     // Optional: Call this function to close the game (useful for a Quit Button)
     public void QuitGame()
     {
-        Debug.Log("Game Exiting...");
+       // Debug.Log("Game Exiting...");
         Application.Quit();
     }
 }

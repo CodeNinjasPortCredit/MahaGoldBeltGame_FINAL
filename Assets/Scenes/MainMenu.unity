@@ -888,8 +888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -44, y: -232.475}
-  m_SizeDelta: {x: 392.2, y: -150.25}
+  m_AnchoredPosition: {x: -44, y: -122.975006}
+  m_SizeDelta: {x: 392.2, y: 68.750015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770989544
 MonoBehaviour:
@@ -911,17 +911,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Senseis: Magdalena, Scott, Jacky
-
-    Assets: SlimUI, N91 Music, Southport
-    Studio,
-
-    Andrew Sitkov Music, Sound Bits
-
-    Chiikawa by its creators
-
-    AI
-    assistant: bug fixes'
+  m_text: "Senseis: Magdalena, Scott, Jacky\nAssets: SlimUI, N91 Music, Southport
+    Studio,\nAndrew Sitkov Music, Sound Bits\nChiikawa by its creators\n\nAI helped
+    with the following scripts: \nEnemyVoice, FadeScreen, LookBehind, Keyandgate."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
   m_sharedMaterial: {fileID: 21148088844906328, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
@@ -930,8 +922,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293059298
-  m_fontColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
+    rgba: 4294639360
+  m_fontColor: {r: 0, g: 1, b: 0.982023, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -948,10 +940,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 250
-  m_fontSizeBase: 600
+  m_fontSize: 464.6
+  m_fontSizeBase: 464.6
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 250
   m_fontSizeMax: 600
   m_fontStyle: 0
@@ -1460,7 +1452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 351642387022362943, guid: 0a68be1bd13d8694e8d8fe85574ac075, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 351642387682386971, guid: 0a68be1bd13d8694e8d8fe85574ac075, type: 3}
       propertyPath: m_IsActive

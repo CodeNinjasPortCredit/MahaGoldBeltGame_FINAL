@@ -284,7 +284,7 @@ public class PlayerControllerTopDown : MonoBehaviour
 
     private void OnPlayerDeath()
     {
-        Debug.Log("Player has died!");
+       // Debug.Log("Player has died!");
         gameOverCanvas.SetActive(true);
         
         // TODO: Implement death logic (respawn, game over screen, etc.)
@@ -311,7 +311,7 @@ public class PlayerControllerTopDown : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
 
-        Debug.Log("Entered Interaction State - Show Minigame Menu");
+        //Debug.Log("Entered Interaction State - Show Minigame Menu");
         // TODO: Spawn minigame menu UI here
     }
 

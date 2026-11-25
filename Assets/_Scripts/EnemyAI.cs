@@ -48,8 +48,6 @@ public class EnemyAI : MonoBehaviour
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
             playerTransform = playerObj.transform;
-        else
-            Debug.LogWarning("Player with tag 'Player' not found!");
 
         // Initialize bodies
         UpdateBodyState();

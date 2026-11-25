@@ -200,10 +200,6 @@ public class PlayerControllerTopDown : MonoBehaviour
                 rectTransform.sizeDelta = sizeDelta;
             }
         }
-        else
-        {
-            Debug.LogWarning("Stamina Bar is not assigned!");
-        }
     }
 
     private void ApplyMovement()
@@ -284,7 +280,6 @@ public class PlayerControllerTopDown : MonoBehaviour
 
     private void OnPlayerDeath()
     {
-        Debug.Log("Player has died!");
         gameOverCanvas.SetActive(true);
         
         // TODO: Implement death logic (respawn, game over screen, etc.)
@@ -310,9 +305,6 @@ public class PlayerControllerTopDown : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
-
-        Debug.Log("Entered Interaction State - Show Minigame Menu");
-        // TODO: Spawn minigame menu UI here
     }
 
     /// <summary>
@@ -323,9 +315,6 @@ public class PlayerControllerTopDown : MonoBehaviour
     {
         isInInteraction = false;
         canMove = true;
-
-        Debug.Log("Exited Interaction State - Resume gameplay");
-        // TODO: Close minigame menu UI here
     }
 
     public bool IsInInteraction() => isInInteraction;

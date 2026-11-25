@@ -260,3 +260,67 @@ it never fires.
 3. No sounds for picking up a key, getting caught, or escaping.
 4. MahaInterior's instruction sign is still a world object, not a screen canvas.
 5. `NONtransformingPlayer` has not been renamed.
+
+---
+
+# AI help on this project
+
+*Added November 25, 2026, after the Round 2 review (Fix List #1) asked for the
+AI help to be described exactly rather than as "bug fixes".*
+
+## What the Credits screen now says
+
+```
+AI assistant: Claude - wrote EnemyVoice and LookBehind, edited Keyandgate,
+Loadscene, FadeScreen and PlayerControllerTopDown, helped build the
+Spaceship Level and find bugs
+```
+
+## The full list
+
+This comes from the git history — the commits carrying `Co-Authored-By: Claude`
+— not from memory.
+
+**Scripts written by the AI from scratch**
+
+| File | What it does |
+| --- | --- |
+| `EnemyVoice.cs` | Plays an "I love you" clip while an enemy can see the player. Reads `EnemyAI.CanSeePlayer()`, so `EnemyAI.cs` itself did not change. |
+| `LookBehind.cs` | Holding Tab swings the camera to the front of the player. |
+
+**Scripts the AI changed**
+
+| File | What changed |
+| --- | --- |
+| `Keyandgate.cs` | Shows the objective line and switches it when the key is picked up; a null check so an unassigned gate does not throw. |
+| `Loadscene.cs` | Fades to black before loading the next scene instead of cutting. |
+| `FadeScreen.cs` | The fade itself. |
+| `PlayerControllerTopDown.cs` | Press R to restart the level; later, removing the leftover debug messages. |
+| `EnemyAI.cs` | One change only: removing a debug message. |
+| `MainMenu1.cs` | One change only: removing a debug message. |
+
+**Not written or changed by the AI:** `Jump.cs`.
+
+**Work outside the scripts**
+
+- The Spaceship Level: putting the player, key and gate inside the hull, opening
+  four doors that were sealed, and adding a north wing to make it bigger
+- Baking the NavMeshes so enemies can chase, and fixing enemies that were
+  floating above the navigation surface in MahaInterior and circus
+- `ObjectiveHUD.prefab`, the portal materials and particle effects
+- Finding and fixing bugs, including an exit the player could not walk into and
+  a duplicated `Keyandgate` component
+- The batchmode editor scripts used to measure and test the game, and the test
+  that checks every level in build order
+
+## One thing to be straight about
+
+Three commits from November 21 — "Address Round 1 Gold Belt feedback: all 6
+Must-fix items", "Address feedback items 7 and 9" and "Address feedback item 8"
+— do **not** carry the `Co-Authored-By: Claude` line, because that line was only
+added from the next commit onward. They touched `ResetLevel.cs`,
+`PlayerControllerTopDown.cs`, and deleted the unused scripts.
+
+They are the same kind of feedback-fixing work as everything above, so they were
+probably done with the same help. The git record cannot prove it either way, so
+it is listed here rather than quietly left out.
